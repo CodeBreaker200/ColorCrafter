@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            position: relative;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .color-code {
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .box:hover .tooltip {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main container-fluid my-4">
+       
+        <div id="box1" class="box" onclick="copyColorCode('box1')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box2" class="box" onclick="copyColorCode('box2')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box3" class="box" onclick="copyColorCode('box3')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box4" class="box" onclick="copyColorCode('box4')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box5" class="box" onclick="copyColorCode('box5')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box6" class="box" onclick="copyColorCode('box6')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box7" class="box" onclick="copyColorCode('box7')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box8" class="box" onclick="copyColorCode('box8')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box9" class="box" onclick="copyColorCode('box9')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box10" class="box" onclick="copyColorCode('box10')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box11" class="box" onclick="copyColorCode('box11')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box12" class="box" onclick="copyColorCode('box12')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box13" class="box" onclick="copyColorCode('box13')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box14" class="box" onclick="copyColorCode('box14')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box15" class="box" onclick="copyColorCode('box15')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box16" class="box" onclick="copyColorCode('box16')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box17" class="box" onclick="copyColorCode('box17')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box18" class="box" onclick="copyColorCode('box18')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box19" class="box" onclick="copyColorCode('box19')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <div id="box20" class="box" onclick="copyColorCode('box20')">
+            <div class="color-code"></div>
+            <div class="tooltip">Copied!</div>
+        </div>
+
+        <button id="bt" class="btn btn-warning">Change Colors</button>
+    </div>
+
+    <script>
+        console.log("Script.js, initialize");
+
+        function getrandomcolor() {
+            let val1 = Math.floor(Math.random() * 256);
+            let val2 = Math.floor(Math.random() * 256);
+            let val3 = Math.floor(Math.random() * 256);
+
+            return {
+                color: `rgb(${val1}, ${val2}, ${val3})`,
+                code: `#${val1.toString(16).padStart(2, '0')}${val2.toString(16).padStart(2, '0')}${val3.toString(16).padStart(2, '0')}`
+            };
+        }
+
+        function changeColors() {
+            let boxes = document.querySelectorAll(".box");
+
+            boxes.forEach((box) => {
+                let randomColor = getrandomcolor();
+                box.style.backgroundColor = randomColor.color;
+                box.style.color = randomColor.color;
+                box.querySelector('.color-code').innerText = randomColor.code;
+            });
+        }
+
+        function copyColorCode(boxId) {
+            const colorCode = document.getElementById(boxId).querySelector('.color-code').innerText;
+
+            
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = colorCode;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const tooltip = document.getElementById(boxId).querySelector('.tooltip');
+            tooltip.style.opacity = '1';
+
+            setTimeout(() => {
+                tooltip.style.opacity = '0';
+            }, 1500);
+        }
+
+        document.getElementById("bt").addEventListener("click", changeColors);
+        changeColors();
+    </script>
+
+</body>
+
+</html>
