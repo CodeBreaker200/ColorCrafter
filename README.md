@@ -1,5 +1,3 @@
-## Screenshots
+## Demo
 
-| Home Page | Color Changing |
-|-----------|-----------------|
-| ![Home Page](https://raw.githubusercontent.com/CodeBreaker200/calc/main/Color.PNG) | ![Color Changing](/path/to/color-changing.png) |
+![Color Changer App](https://raw.githubusercontent.com/CodeBreaker200/calc/main/Color.PNG)
