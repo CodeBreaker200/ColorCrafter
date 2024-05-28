@@ -19,6 +19,6 @@ To run this project, you only need a web browser.
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/RandomColorGenerator.git
+   git clone https://github.com/CodeBreaker200/Random_Color_Code_Generator.git
 
 ![Color Changer App](https://raw.githubusercontent.com/CodeBreaker200/calc/main/Color.PNG)
