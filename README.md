@@ -1,6 +1,6 @@
-# Random Color Generator
+# ColorCrafter
 
-Random Color Generator is a simple and interactive web application that allows users to generate random colors and copy their color codes. This project is built with HTML, CSS, and JavaScript, and it includes features like changing colors and copying color codes with a single click.
+ColorCrafter is a simple and interactive web application that allows users to generate random colors and copy their color codes. This project is built with HTML, CSS, and JavaScript, and it includes features like changing colors and copying color codes with a single click.
 
 ## Features
 
